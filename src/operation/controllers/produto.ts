@@ -24,6 +24,8 @@ export class ProdutoController {
   static buscarPorId(id: string, produtosDataSource: IDataSource) {
     const produtosGateway = new ProdutoGateway(produtosDataSource);
     const produto = ProdutosUseCase.buscarPorId(id, produtosGateway);
-    return ProdutoPresenter.toDTO(produto);
+    if (produto)
+      return ProdutoPresenter.toDTO(produto);
+    return null;
   }
 }
