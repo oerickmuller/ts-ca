@@ -1,6 +1,6 @@
-import { generateRandomString } from "@/common/helpers/generators.js";
-import { Produto } from "@/core/entities/produto.js";
-import { ProdutoGateway } from "@/operation/gateways/produto.js";
+import { generateRandomString } from "../../common/helpers/generators";
+import { Produto } from "../../core/entities/produto.js";
+import { ProdutoGateway } from "../../operation/gateways/produto.js";
 
 export class ProdutosUseCase {
   static cadastrarProduto(

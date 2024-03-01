@@ -1,5 +1,5 @@
-import { IDataSource } from "@/common/interfaces/datasource.js";
-import { Produto } from "@/core/entities/produto.js";
+import { IDataSource } from "../../common/interfaces/datasource";
+import { Produto } from "../../core/entities/produto";
 
 export class ProdutoGateway {
   dataSource: IDataSource;
@@ -7,13 +7,13 @@ export class ProdutoGateway {
     this.dataSource = ds;
   }
 
-  cadastrar(produto: Produto) {
-    const sucesso = this.dataSource.incluirProduto(produto);
+  async cadastrar(produto: Produto): Promise<boolean> {
+    const sucesso = await this.dataSource.incluirProduto(produto);
     return sucesso;
   }
 
-  buscarPorId(id: string) {
-    const produto = this.dataSource.buscarProdutoPorId(id);
+  async buscarPorId(id: string) {
+    const produto = await this.dataSource.buscarProdutoPorId(id);
     return produto;
   }
 }

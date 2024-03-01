@@ -4,7 +4,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 
 import { routing } from './routes';
-import { produtosRouting } from './routes/produto';
+import { produtosRouting } from '../api/routes/produto.js';
 
 dotenv.config();
 
@@ -20,5 +20,5 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 })

@@ -1,6 +1,7 @@
-import { ProdutoDTO } from "../dtos/produto.js";
+import { ProdutoDTO } from "../dtos/produto.dto.js";
 
 export interface IDataSource {
-  incluirProduto(produto: ProdutoDTO): boolean;
-  buscarProdutoPorId(id: string): ProdutoDTO|null;
+  incluirProduto(produto: ProdutoDTO): Promise<boolean>;
+  buscarProdutoPorId(id: string): Promise<ProdutoDTO | null>;
+  incluirProposta(produtoId: string, usuarioId: string, valor: number): Promise<boolean>;
 }

@@ -1,6 +1,7 @@
-import { NovoProdutoDTO } from "@/common/dtos/novoProduto.js";
-import { ProdutosUseCase } from "@/core/usecases/produtos.js";
-import { IDataSource } from "@/common/interfaces/datasource.js";
+import { NovoProdutoDTO } from "../../common/dtos/novoProduto.dto.js";
+import { ProdutosUseCase } from "../../core/usecases/produtos.js";
+import { IDataSource } from "../../common/interfaces/datasource.js";
+
 import { ProdutoGateway } from "../gateways/produto.js";
 import { ProdutoPresenter } from "../presenters/produto.js";
 
@@ -21,11 +22,12 @@ export class ProdutoController {
     return ProdutoPresenter.toDTO(produtoCriado);
   }
 
-  static buscarPorId(id: string, produtosDataSource: IDataSource) {
+  static async buscarPorId(id: string, produtosDataSource: IDataSource) {
     const produtosGateway = new ProdutoGateway(produtosDataSource);
-    const produto = ProdutosUseCase.buscarPorId(id, produtosGateway);
+    const produto = await ProdutosUseCase.buscarPorId(id, produtosGateway);
     if (produto)
       return ProdutoPresenter.toDTO(produto);
     return null;
   }
+
 }

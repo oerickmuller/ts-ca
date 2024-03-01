@@ -1,5 +1,5 @@
-import { ProdutoDTO } from "@/common/dtos/produto.js";
-import { Produto } from "@/core/entities/produto.js";
+import { ProdutoDTO } from "../../common/dtos/produto.dto";
+import { Produto } from "../../core/entities/produto";
 
 export class ProdutoPresenter {
   static toDTO(produto: Produto): ProdutoDTO {
