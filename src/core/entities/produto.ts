@@ -1,4 +1,4 @@
-export class Produto {
+export class ProdutoEntity {
   public id: string;
   public nome: string;
   public dataCadastro: number;
