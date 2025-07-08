@@ -1,7 +1,7 @@
-import { generateRandomString } from "../../common/helpers/generators";
-import { ProdutoEntity } from "../../core/entities/produto.js";
-import { ProdutoGateway } from "../../operation/gateways/produto.js";
-import { PropostaEntity } from "../entities/proposta";
+import { generateRandomString } from "@core/common/helpers/generators";
+import { ProdutoEntity } from "@core/entities/produto.js";
+import { ProdutoGateway } from "@core/operation/gateways/produto.js";
+import { PropostaEntity } from "@core/entities/proposta";
 
 export class ProdutosUseCase {
   static async buscarPropostas(

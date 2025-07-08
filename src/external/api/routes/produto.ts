@@ -1,11 +1,11 @@
-import { ProdutoController } from "../../../operation/controllers/produto.js";
 import { StatusCodes } from "http-status-codes";
 import express from "express";
 import { DrizzleSqliteDataSource } from "../../datasource/drizzle-sqlite.js";
-import { NovoProdutoDTO } from "../../../common/dtos/novoProduto.dto.js";
-import { NovaPropostaDTO } from "../../../common/dtos/proposta.dto.js";
-import { rmSync } from "fs";
-import { ProdutoControllerError } from "../../../operation/controllers/produto.errors.js";
+
+import { ProdutoController } from "@core/operation/controllers/produto.js";
+import { NovoProdutoDTO } from "@core/common/dtos/novoProduto.dto.js";
+import { NovaPropostaDTO } from "@core/common/dtos/proposta.dto.js";
+import { ProdutoControllerError } from "@core/operation/controllers/produto.errors.js";
 
 const produtosRouting = express.Router();
 
@@ -60,7 +60,7 @@ produtosRouting.post("/:id/propostas", async (req, res) => {
       propostaDto,
       datasource
     );
-  } catch (_err) {
+  } catch (_err: any) {
     if (_err instanceof ProdutoControllerError)
       res.status(StatusCodes.BAD_REQUEST).send(_err.message);
     else res.status(StatusCodes.BAD_REQUEST).send(String(_err));

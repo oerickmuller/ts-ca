@@ -1,0 +1,13 @@
+POST http://localhost:7000/produtos HTTP/1.1
+Content-Type: application/json
+
+{
+  "nome": "lavaroupas",
+  "valor_esperado": 20000,
+  "valor_minimo": 13000
+}
+
+
+### 
+
+GET http://localhost:7000/produtos/UXN6cgijyJenbGfLqQ1N HTTP/1.1

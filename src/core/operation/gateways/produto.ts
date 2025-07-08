@@ -1,8 +1,8 @@
-import { ProdutoDTO } from "../../common/dtos/produto.dto";
-import { PropostaDTO } from "../../common/dtos/proposta.dto";
-import { IDataSource } from "../../common/interfaces/datasource";
-import { ProdutoEntity } from "../../core/entities/produto";
-import { PropostaEntity } from "../../core/entities/proposta";
+import { ProdutoDTO } from "@core/common/dtos/produto.dto";
+import { PropostaDTO } from "@core/common/dtos/proposta.dto";
+import { IDataSource } from "@core/common/interfaces/datasource";
+import { ProdutoEntity } from '@core/entities/produto';
+import { PropostaEntity } from "@core/entities/proposta";
 
 export class ProdutoGateway {
   dataSource: IDataSource;

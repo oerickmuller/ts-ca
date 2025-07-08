@@ -1,6 +1,6 @@
-import { ProdutoDTO } from "../../common/dtos/produto.dto";
-import { ProdutoEntity } from "../../core/entities/produto";
-import { PropostaEntity } from "../../core/entities/proposta";
+import { ProdutoDTO } from "@core/common/dtos/produto.dto";
+import { ProdutoEntity } from "@core/entities/produto";
+import { PropostaEntity } from "@core/entities/proposta";
 import { PropostaPresenter } from "./proposta";
 
 export class ProdutoPresenter {

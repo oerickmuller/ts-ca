@@ -1,5 +1,5 @@
-import { ProdutoDTO } from "../dtos/produto.dto.js";
-import { PropostaDTO } from "../dtos/proposta.dto.js";
+import { ProdutoDTO } from "@core/common/dtos/produto.dto.js";
+import { PropostaDTO } from "@core/common/dtos/proposta.dto.js";
 
 export interface IDataSource {
   buscarPropostasParaProduto(id: string): Promise<PropostaDTO[] | null>;

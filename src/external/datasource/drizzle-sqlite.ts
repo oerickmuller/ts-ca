@@ -1,10 +1,10 @@
 import { BetterSQLite3Database, drizzle } from "drizzle-orm/better-sqlite3";
 import Database from "better-sqlite3";
 import { text, integer, sqliteTable } from "drizzle-orm/sqlite-core";
-import { IDataSource } from "../../common/interfaces/datasource";
-import { ProdutoDTO } from "../../common/dtos/produto.dto";
+import { IDataSource } from "@core/common/interfaces/datasource";
+import { ProdutoDTO } from "@core/common/dtos/produto.dto";
 import { eq } from "drizzle-orm";
-import { PropostaDTO } from "../../common/dtos/proposta.dto";
+import { PropostaDTO } from "@core/common/dtos/proposta.dto";
 
 export class DrizzleSqliteDataSource implements IDataSource {
   private db: BetterSQLite3Database;

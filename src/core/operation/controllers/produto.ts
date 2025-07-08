@@ -1,16 +1,16 @@
-import { NovoProdutoDTO } from "../../common/dtos/novoProduto.dto.js";
-import { ProdutosUseCase } from "../../core/usecases/produtos.js";
-import { IDataSource } from "../../common/interfaces/datasource.js";
+import { NovoProdutoDTO } from "@core/common/dtos/novoProduto.dto.js";
+import { ProdutosUseCase } from "@core/usecases/produtos";
+import { IDataSource } from "@core/common/interfaces/datasource.js";
 
-import { ProdutoGateway } from "../gateways/produto.js";
-import { ProdutoPresenter } from "../presenters/produto.js";
+import { ProdutoGateway } from "@core/operation/gateways/produto.js";
+import { ProdutoPresenter } from "@core/operation/presenters/produto.js";
 import {
   NovaPropostaDTO,
   PropostaDTO,
-} from "../../common/dtos/proposta.dto.js";
+} from "@core/common/dtos/proposta.dto.js";
 
-import { PropostaPresenter } from "../presenters/proposta.js";
-import { ProdutoDTO } from "../../common/dtos/produto.dto.js";
+import { PropostaPresenter } from "@core/operation/presenters/proposta.js";
+import { ProdutoDTO } from "@core/common/dtos/produto.dto.js";
 
 import { ProdutoControllerError } from "./produto.errors.js";
 
